@@ -1,0 +1,4 @@
+interface:
+  display_name: "GrillMe"
+  short_description: "Interrogate coding plans before implementation"
+  default_prompt: "Use $grillme to interview me about this coding plan until we converge on a written plan."
