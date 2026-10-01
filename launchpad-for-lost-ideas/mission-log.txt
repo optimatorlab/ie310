@@ -1,0 +1,9 @@
+MISSION LOG 001
+================
+
+Status: READY FOR LIFTOFF
+Payload: A successful repository push
+Crew: IE310 explorers
+
+If this file appears on the remote branch, the launchpad has successfully
+carried a second artifact into orbit.
