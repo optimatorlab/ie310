@@ -1,0 +1,26 @@
+# MySQL for IE 310.   Start:  docker compose up -d      Stop:  docker compose down
+# Wipe everything and start fresh:  docker compose down -v
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: ie310-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "127.0.0.1:3306:3306"      # only reachable from your own computer
+    volumes:
+      - mysql_data:/var/lib/mysql
+      # Scripts in this folder run once, in name order, the first time the container starts.
+      - ./sql/00_users.sql:/docker-entrypoint-initdb.d/01_users.sql:ro
+      - ./sql/school_toy.sql:/docker-entrypoint-initdb.d/02_school_toy.sql:ro
+      # Class 2: put citibike.sql.gz here (see INSTALL_docker.md).
+      - ./data:/data:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot", "--silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  mysql_data:

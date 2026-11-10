@@ -1,0 +1,3 @@
+# Large Class 2 dump is distributed through UBLearns, not git
+data/*
+!data/.gitkeep
