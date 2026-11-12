@@ -53,7 +53,12 @@ You should see `courses`, `enrollments`, and `students`.
 
 ## 4. Class 2: load the Citi Bike database
 
-Download `citibike.sql.gz` from UBLearns and put it, **without unzipping it**, in the `data` folder next to `docker-compose.yml`. Then run:
+Download `citibike.sql.gz` from UBLearns and put it, **without unzipping it**, in the `data` folder next to `docker-compose.yml`.
+
+* **Do not double-click or unzip the file.** On a Mac, Archive Utility unpacks `.gz` files automatically, and then `citibike.sql.gz` no longer exists and the command below fails. If that happens, download it again.
+* **The name must be exactly `citibike.sql.gz`.** Some browsers add a suffix, such as `citibike.sql.gz.txt` or `citibike (1).sql.gz`. On Windows, turn on *View > Show > File name extensions* in File Explorer to check, and rename the file if needed.
+
+Then run:
 
 ```
 docker compose exec mysql sh -c "gunzip -c /data/citibike.sql.gz | mysql -uroot -proot"

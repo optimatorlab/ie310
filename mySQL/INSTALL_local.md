@@ -61,6 +61,8 @@ You should see `courses`, `enrollments`, and `students`. (On Windows, if `mysql`
 ## 4. Class 2: load the Citi Bike database
 
 1. Download `citibike.sql.gz` from UBLearns into the `mySQL/data` folder.
+   * **The name must be exactly `citibike.sql.gz`.** Some browsers add a suffix, such as `citibike.sql.gz.txt` or `citibike (1).sql.gz`. On Windows, turn on *View > Show > File name extensions* in File Explorer to check, and rename the file if needed.
+   * **Don't double-click the file.** On a Mac, Archive Utility unpacks it automatically. Use the Python command in step 2 instead, so the result is always `data/citibike.sql`. If it was already unpacked, delete the extra copy or folder and download the `.gz` again.
 2. Unzip it with Python (works on every OS; run in the `mySQL` folder):
    ```
    python -c "import gzip, shutil; shutil.copyfileobj(gzip.open('data/citibike.sql.gz'), open('data/citibike.sql', 'wb'))"

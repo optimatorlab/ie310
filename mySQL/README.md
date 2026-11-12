@@ -5,7 +5,7 @@ Two classes on relational databases and SQL, for students who already know panda
 | Class | Notebook | Database | What you do |
 |---|---|---|---|
 | 1 | `01_relational_fundamentals.ipynb` | `school` (12 students, 6 courses, 35 enrollments) | Learn relational concepts and basic SQL, side by side with pandas |
-| 2 | `02_citibike_queries.ipynb` *(coming)* | `citibike` (1.2 million Feb 2026 rides) | Write queries against real data |
+| 2 | `02_citibike_queries.ipynb` | `citibike` (1.2 million Feb 2026 rides) | Aggregations, joins, CTEs, window functions, and indexes on real data |
 
 ## Set up 
 
@@ -36,4 +36,5 @@ mySQL/
   sql/school_toy.sql            the Class 1 toy database
   data/                         put citibike.sql.gz here for Class 2 (not in git)
   01_relational_fundamentals.ipynb
+  02_citibike_queries.ipynb
 ```
